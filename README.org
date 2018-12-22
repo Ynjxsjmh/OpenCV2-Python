@@ -1,0 +1,27 @@
+**English** | [[./README-zh-CN.org][Chinese]]
+
+** About
+This repo is used to store my code writen with OpenCV2 and Python 3.x.
+
+** Usage
+To run these codes, you need to install OpenCV2 first, and it's easy for pip:
+#+BEGIN_SRC python
+pip install opencv-python
+#+END_SRC
+
+Some codes also need support of third-party packages =numpy=, you can also use pip to install it:
+#+BEGIN_SRC python
+pip install numpy
+#+END_SRC
+
+** Structure
+Folder =./data/haarcascades= is used to store the pre-trained classifier used to detect face features offered by opencv. I only store the files related with my code. To access more, visit the website: [[https://github.com/opencv/opencv_contrib/tree/master/modules/face/data/cascades][opencv_contrib/modules/face/data/cascades/]].
+
+Folder =./identify_feature_in_face= store some simplest codes used to detect face features. Now I  have realised the face and nose part. For nose part, there are two algorithm: one is the normal way to detect nose, another is an improved way to detect nose. For improved part, I first detect face part, then detect nose in face part.
+
+Folder =./change_nose_to_joker_nose= store a program which can replace normal nose to joker's nose. Subfolder picture is to replace a picture. Subfolder video is to replace a video. To note that the detect part uses the improved way to detect nose.
+
+** More
+Program in this repo all uses function offered by opencv. You may use third-party packages dlib to save your life struggling with face detection.
+
+When contributing to this repo, I also found an interesting repo:[[https://github.com/burningion/automatic-memes][Automatic Memes in Python with Face Detection]], which is much better than mine. You can access it to learn more.

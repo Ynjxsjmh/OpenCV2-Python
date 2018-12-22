@@ -1,0 +1,28 @@
+[[./README.org][英文版]] | **中文版**
+
+** 关于
+这个仓库是用来存放一些自己用 OpenCV2 在 Python 3.x 下编写的代码
+
+** 使用
+想要使用这个仓库，首先你得安装好 OpenCV2，用 pip 只需要简单的一行：
+#+BEGIN_SRC python
+pip install opencv-python
+#+END_SRC
+
+里面的一些程序，我也使用了 numpy 这个科学计算的库。安装也十分简单：
+#+BEGIN_SRC python
+pip install numpy
+#+END_SRC
+
+** 结构
+目录 =./data/haarcascades= 是用来存放 opencv 为我们准备的一些人脸检测相关的 pre-trained 分类器。这里只放了和程序相关的部分。如果想要获取一些额外的本地不存在的，可以访问 [[https://github.com/opencv/opencv_contrib/tree/master/modules/face/data/cascades][opencv_contrib/modules/face/data/cascades/]] 获取更多。
+
+目录 =./identify_feature_in_face= 存放了一些简单的使用分类器分类人脸特征的代码。目前已实现有脸和鼻子两个特征。其中鼻子有两个算法：simple 的那个只是简单的用鼻子分类器识别；clever 的那个则是先是识别脸部，然后再从脸部识别鼻子，这样抗干扰能力更强。
+
+目录 =./change_nose_to_joker_nose= 存放了将人的鼻子换成小丑鼻子的代码。picture 里存放的是替换图片的，video 存放的是替换视频里的。这个目录下的算法都是使用 clever 的，其中 clever 算法在处理视频的时候效果明显，不使用 clever 的话会识别出许多杂乱的信息，使用了后 99% 都正确了。
+
+** 后话
+这个仓库里都是使用原生的东西。dlib 这个库是一个第三方人脸识别的库，这里没有使用。大家有兴趣的话可以去玩玩。
+
+我在写这个仓库的过程中，发现了一个有意思的项目：[[https://github.com/burningion/automatic-memes][Automatic Memes in Python with Face Detection]]。这个比我的这个玩具高级许多，大家可以去学习一下，里面也有用到我说的 dlib 库。
+
