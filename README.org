@@ -21,7 +21,7 @@ Folder =./identify_feature_in_face= store some simplest codes used to detect fac
 
 Folder =./change_nose_to_joker_nose= store a program which can replace normal nose to joker's nose. Subfolder picture is to replace a picture. Subfolder video is to replace a video. To note that the detect part uses the improved way to detect nose.
 
-Folder =./used_for_tg_sticker= is used to change to image's width to 512px which is required by telegram's sticker restriction. The expand_img.py does that function. =change_file_name.ps1= can change file name from =â«ËöÃÈ0001.png= to =0001.png=, cause I notice that cv2.imread may couldn't read a image containing chinese character. To use those two programs, you should place them in the folder with images you want to process. The source of the =CuteSmallBoy Sticker= is from [[http://tieba.baidu.com/home/main?un=LONE04&fr=home&id=65bc4c4f4e453034092b][Tieba username: Lone04]]
+Folder =./used_for_tg_sticker= is used to change to image's width to 512px which is required by telegram's sticker restriction. The =expand_img.py= does that function. =change_file_name.ps1= can change file name from =â«ËöÃÈ0001.png= to =0001.png=, cause I notice that cv2.imread may couldn't read a image containing chinese character. To use those two programs, you should place them in the folder with images you want to process. The source of the =CuteSmallBoy Sticker= is from [[http://tieba.baidu.com/home/main?un=LONE04&fr=home&id=65bc4c4f4e453034092b][Tieba username: Lone04]]
 
 ** More
 Program in this repo all uses function offered by opencv. You may use third-party packages dlib to save your life struggling with face detection.
