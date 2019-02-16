@@ -1,4 +1,4 @@
-**English** | [[./README-zh-CN.org][Chinese]]
+*English* | [[./README-zh-CN.org][Chinese]]
 
 ** About
 This repo is used to store my code writen with OpenCV2 and Python 3.x.
